@@ -1,1 +1,30 @@
-**Update**
+Project 5: Generate Faces
+
+  - The purpose of the project is to use generative adversarial networks to generate new images of faces.
+  - Project Requirements:
+    - Data Loading and Processing
+      - Has get_dataloader been implemented?
+        - The function get_dataloader should transform image data into resized, Tensor image types and return a DataLoader that batches all the training data into an appropriate size
+      - Has the scale function been implemented?
+        - Pre-process the images by creating a scale function that scales images into a given pixel range. This function should be used later, in the training loop
+    - Build the Adversarial Networks
+      - Does the discriminator discriminate between real and fake mages?
+        - The Discriminator class is implemented correctly; it outputs one value that will determine whether an image is real or fake
+      - Does the generator generate fake mages?
+        - The Generator class is implemented correctly; it outputs an image of the same shape as the processed training data
+      - Is the weight initialization function implemented correctly?
+        - This function should initialize the weights of any convolutional or linear layer with weights taken from a normal distribution with a mean = 0 and standard deviation = 0.02
+    - Optimization Strategy
+      - Are the real_loss and fake_loss functions implemented correctly?
+        - The loss functions take in the outputs from a discriminator and return the real or fake loss
+      - Are appropriate optimizers defined for the networks?
+        - There are optimizers for updating the weights of the discriminator and generator. These optimizers should have appropriate hyperparameters.
+    - Training and Results
+      - Are all adversarial networks trained correctly?
+        - Real training images should be scaled appropriately. The training loop should alternate between training the discriminator and generator networks
+      - Do all models and optimizers have reasonable hyperparameters?
+        - There is not an exact answer here, but the models should be deep enough to recognize facial features and the optimizers should have parameters that help wth model convergence
+      - Does the project generate realistic faces?
+        - The project generates realistic faces. It should be obvious that generated sample images look like faces
+      - How could your model improve?
+        - The question about model improvement is answered
